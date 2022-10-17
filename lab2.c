@@ -4,12 +4,13 @@
 int main()
 {
     double x;
-    printf("Enter x { -1.0 <= x <= 1.0 } -> ");
+    const double pi = 3.1415926535;
+    printf("Enter x { 0 <= x <= pi } -> ");
     scanf("%lf", &x);
-    if (-1.0 <= x && x <= 1.0)
+    if (0 <= x && x <= pi)
     {
-        double y = x * sqrt (1.0 + x * x) + asin(x);
-        double z = exp(y) * sqrt(1.0 + exp(2.0 * y));
+        double y = sqrt(sin(2*x)) + sqrt(sin(3*x));
+        double z = pow(log(tan(y-pi/8)),1/4);
         printf("y(x) = %lf\nz(y) = %lf\n", y, z);
     }
     else
